@@ -1,351 +1,155 @@
-*{
-      padding: 0;
-      margin: 0;
-      box-sizing: border-box;
-    }
- 
-    #navbg{
-      background-image: url('images/banner01.jpg');
+body {
+      background-image:url('images/caffeine-coffee-coffee-beans-585750.jpg');
       background-position: center;
       background-repeat: no-repeat;
-      background-size:cover;
-      height: 600px;
+      background-size: 100%;
+      display: flex;
+      height: 100vh;
+      justify-content: center;
+      align-items: center;
     }
 
-    #welcomeMessage{
-      color: white;
-      font-size: 15px;
-      margin-top: 9px;
-      font-family: Georgia, 'Times New Roman', Times, serif;
-      margin-right: 40px;
-    }
-   .nav-link{
-      color: white;
-      text-transform: uppercase;
-      font-size: 12px;
-    }
-    .nav-link:hover{
-      color: rgb(230, 227, 227);
+    .container {
+      background: rgba(255, 255, 255, 0.376);
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      width: 400px;
     }
 
-    #navside{
-      justify-content: end;
+    .container h2 {
+      text-align: center;
+      color: rgb(50 38 38);
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
     }
-    #logout {
-      padding: 0px 10px;
-      margin-left: 15px;
-      font-size: 13px;
-      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-      background: #dc3545;
+
+    .container input {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+    }
+
+    input{
+      font-size: medium;
+      border-radius: 10px;
+      border: none;
+      background-color: rgba(240, 255, 255, 0.429);
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+    input:hover{
+      background-color: white;
+      color: black;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+    .container button {
+      width: 100%;
+      padding: 10px;
+      background: #4CAF50;
       color: white;
       border: none;
       cursor: pointer;
-      border-radius: 5px;
     }
 
-    #logout:hover {
-      background: #c82333;
-    }
- 
- .nav-link{
-      color: white;
-      text-transform: uppercase;
-      font-size: 12px;
-    }
- 
-    #offcanvasScrolling{
-      background-color: rgba(184, 183, 183, 0.864);
-    }
- 
- #energy{
-  font-size: 28px;
-  font-weight: 400;
-  color: #fff;
-  margin-top: 10%;
-  margin-left: 5%;
- }
-
- 
-    #daycoffee{
-      font-size: 60px;
-    color: #fff;
-    width: 52%;
-    margin-left: 5%;
+    .container button:hover {
+      background: #45a049;
     }
 
-    #buy{
-      margin-left: 5%;
-    border-radius: 25px;
-    border: none;
-    font-size: 16px;
-    padding: 5px 30px;
-    font-weight: 400;
-    }
-    #buy:hover{
-      background-color: #ffffff00;
-      color: white;
-      border: 1px solid white;
-    }
-
-    #cont{
-      margin-top: 5%;
-      width: 100%;
-      display: flex;
-    }
-    .vid{
-      width: 50%;
-    }
-    .makingcoffee{
-      width: 50%;
-    }
-    .video-bg{
-      opacity:0.7;
-    }
-    .livecoffe{
-      color: goldenrod;
-      margin-top: 2%;
-      margin-left: 20%;
-    }
-    .menu{
-      background-image: url('images/menu-bg.jpg.webp');
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover;
-      height: 1050px;
-    }
-    #whatcoffee{
-      margin-top:5%;
-      padding-top: 4%;
+    .message {
+      margin-top: 10px;
       text-align: center;
-      margin-bottom: 7%;
+      color: green;
     }
-    .single-menu{
-     /* background-color:rgb(255, 254, 254);
-      box-shadow: rgba(0, 0, 0, 0.061) 4px 4px; */
-      background-color: #fff;
-    box-shadow: 0px 10px 30px 0px rgba(182, 136, 52, 0.2);
-      width:350px;
-      height: 430px;
-      border-radius: 10px;
-    }
-    .menucoffee{
-      position: relative;
-      right: 11px;
-      border-top-right-radius: 10px;
-       border-top-left-radius: 10px;
-    }
-    .menunames{
-margin-top: 15px;
-    }
-    .price{
-margin-top: 15px;
-font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    }
-    .menufell{
-font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    }
-    .reviewbg{
-      background-color: rgb(158, 123, 35);
-      height: 500px;
-      margin-top: 10%;
-    }
-    .reviewtext{
-      color: white;
-    }
-    .counter{
-      color: white;
-    }
-    .personreviw{
-      color: white;
-    }
-    #footbg{
-      background-image: url('images/footer-bg.jpg.webp');
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover;
-      height: 400px;
-      margin-top: 5%;
-      padding-top: 12%;
-    }
-    #footermatter{
-      position: relative;
-      top: 155px;
-      margin-left:90px ;
-      margin-right: 45px;
-    left: 55px;
-     /* border: 2px solid red; */
-    }
-    .footerheading{
-      color: white;
+    #haveaccount{
+      font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+      color: rgb(50 38 38);
+      text-align: center;
     }
 
- @media (max-width: 1200px) {
-  #navbg {
-    background-size: cover;
-    height: 500px;
-  }
-   #daycoffee{
-    width: 55%;
-    font-size: 54px;
-  }
-  #menucofe{
-    display: flex;
-    justify-content: center;
-  }
-  .reviewbg{
-    margin-top: 40%;
-  }
-} 
 
-@media (max-width: 992px) {
-  #navbg {
+
+    /* Base styles already exist above */
+
+/* Small devices (phones, less than 576px) */
+@media (max-width: 575.98px) {
+  body{
     background-size: cover;
-    height: 450px;
   }
-   #offcanvasScrolling{
-    width: 50%;
+  .container {
+    width: 100%;
+    padding: 20px;
   }
-    #daycoffee{
-    width: 65%;
-    font-size: 54px;
+
+  .container h2 {
+    font-size: 1.5rem;
   }
-   #cont{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+
+  input {
+    font-size: 0.9rem;
+    padding: 8px;
   }
- .video-bg{
-      display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 200%;
-  }
-  .livecoffe{
-      display: flex;
-    flex-direction: column;
-    width: 170%;
-  }
-.reviewbg{
-    margin-top: 220%;
-    height: 700px;
-  }
-      #footbg{
-    height: 500px;
+
+  .container button {
+    font-size: 0.9rem;
+    padding: 8px;
   }
 }
 
-@media (max-width: 768px) {
-  #navbg {
-    background-size: cover;
-    height: 400px;
-  }
-   #offcanvasScrolling{
-    width: 60%;
-  }
-  #energy{
-    width: 60%;
-    font-size:20px ;
-  }
-    #daycoffee{
-    width: 60%;
-    font-size: 35px;
-  }
-  #cont{
-    display: flex;
-    flex-direction: column;
-  }
-   .video-bg{
-      display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 200%;
-  }
-  .livecoffe{
-      display: flex;
-    flex-direction: column;
-    width: 170%;
-  }
-  .reviewbg{
-    margin-top: 300%;
-    text-align: center;
-    height: 800px;
-  }
-    #footbg{
-    height: 700px;
-  }
-}
-
-@media (max-width: 576px) {
-  #navbg {
-    background-size: cover;
+/* Medium devices (tablets, 576px to 991px) */
+@media (min-width: 576px) and (max-width: 991.98px) {
+ body{
+  background-size: cover;
+ }
+  .container {
+    width: 90%;
     height: 350px;
-  }
-   #offcanvasScrolling{
-    width: 70%;
-  }
-   #energy{
-    width: 60%;
-    font-size:15px ;
-  }
-  #daycoffee{
-    width: 65%;
-    font-size: 25px;
-  }
-   .video-bg{
-      display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 200%;
-  }
-  .livecoffe{
-      display: flex;
-    flex-direction: column;
-    width: 170%;
+    padding: 25px;
+    line-height: 45px;
   }
 
-   .reviewbg{
-    margin-top: 420%;
-    height: 870px;
-    text-align: center;
+  .container h2 {
+    font-size: 2.5rem;
   }
-  @media (max-width: 414px){
-     #navbg {
-    background-size: cover;
-    height: 300px;
+
+  input {
+    font-size: 1rem;
+    padding: 5px;
   }
-   #offcanvasScrolling{
-    width: 70%;
+
+  .container button {
+    font-size: 1rem;
+    padding: 5px;
   }
-   #energy{
-    width: 60%;
-    font-size:10px ;
+  #haveaccount{
+  font-size: 1rem;
+}
+form{
+  line-height:30px;
+}
+#name{
+  padding: 5px;
+}
+#email{
+  padding: 5px;
+}
+#password{
+  padding: 5px;
+}
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .container {
+    width: 400px;
   }
-    #daycoffee{
-    width: 65%;
-    font-size: 20px;
+
+  .container h2 {
+    font-size: 2rem;
   }
-  }
-  .video-bg{
-      display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 200%;
-  }
-  .livecoffe{
-      display: flex;
-    flex-direction: column;
-    width: 170%;
-  }
-    .reviewbg{
-    margin-top: 510%;
-    height: 900px;
-    text-align: center;
-  }
-  #footbg{
-    height: 700px;
-  }
-  #footermatter{
-   position: relative;
-   left: -5%;
+
+  input,
+  .container button {
+    font-size: 1rem;
   }
 }
+
+    
