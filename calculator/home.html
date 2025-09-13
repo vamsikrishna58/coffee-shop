@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home Page</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+  <style>
+
+    *{
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+ 
+    #navbg{
+      background-image: url('images/banner01.jpg');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size:cover;
+      height: 600px;
+    }
+
+    #welcomeMessage{
+      color: white;
+      font-size: 15px;
+      margin-top: 9px;
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      margin-right: 40px;
+    }
+   .nav-link{
+      color: white;
+      text-transform: uppercase;
+      font-size: 12px;
+    }
+    .nav-link:hover{
+      color: rgb(230, 227, 227);
+    }
+
+    #navside{
+      justify-content: end;
+    }
+    #logout {
+      padding: 0px 10px;
+      margin-left: 15px;
+      font-size: 13px;
+      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      background: #dc3545;
+      color: white;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    #logout:hover {
+      background: #c82333;
+    }
+ 
+ .nav-link{
+      color: white;
+      text-transform: uppercase;
+      font-size: 12px;
+    }
+ 
+    #offcanvasScrolling{
+      background-color: rgba(184, 183, 183, 0.864);
+    }
+ 
+ #energy{
+  font-size: 28px;
+  font-weight: 400;
+  color: #fff;
+  margin-top: 10%;
+  margin-left: 5%;
+ }
+
+ 
+    #daycoffee{
+      font-size: 60px;
+    color: #fff;
+    width: 52%;
+    margin-left: 5%;
+    }
+
+    #buy{
+      margin-left: 5%;
+    border-radius: 25px;
+    border: none;
+    font-size: 16px;
+    padding: 5px 30px;
+    font-weight: 400;
+    }
+    #buy:hover{
+      background-color: #ffffff00;
+      color: white;
+      border: 1px solid white;
+    }
+
+    #cont{
+      margin-top: 5%;
+      width: 100%;
+      display: flex;
+    }
+    .vid{
+      width: 50%;
+    }
+    .makingcoffee{
+      width: 50%;
+    }
+    .video-bg{
+      opacity:0.7;
+    }
+    .livecoffe{
+      color: goldenrod;
+      margin-top: 2%;
+      margin-left: 20%;
+    }
+    .menu{
+      background-image: url('images/menu-bg.jpg.webp');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      height: 1050px;
+    }
+    #whatcoffee{
+      margin-top:5%;
+      padding-top: 4%;
+      text-align: center;
+      margin-bottom: 7%;
+    }
+    .single-menu{
+     /* background-color:rgb(255, 254, 254);
+      box-shadow: rgba(0, 0, 0, 0.061) 4px 4px; */
+      background-color: #fff;
+    box-shadow: 0px 10px 30px 0px rgba(182, 136, 52, 0.2);
+      width:350px;
+      height: 430px;
+      border-radius: 10px;
+    }
+    .menucoffee{
+      position: relative;
+      right: 11px;
+      border-top-right-radius: 10px;
+       border-top-left-radius: 10px;
+    }
+    .menunames{
+margin-top: 15px;
+    }
+    .price{
+margin-top: 15px;
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+    .menufell{
+font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+    .reviewbg{
+      background-color: rgb(158, 123, 35);
+      height: 500px;
+      margin-top: 10%;
+    }
+    .reviewtext{
+      color: white;
+    }
+    .counter{
+      color: white;
+    }
+    .personreviw{
+      color: white;
+    }
+    #footbg{
+      background-image: url('images/footer-bg.jpg.webp');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      height: 400px;
+      margin-top: 5%;
+      padding-top: 12%;
+    }
+    #footermatter{
+      position: relative;
+      top: 155px;
+      margin-left:90px ;
+      margin-right: 45px;
+    left: 55px;
+     /* border: 2px solid red; */
+    }
+    .footerheading{
+      color: white;
+    }
+
+ @media (max-width: 1200px) {
+  #navbg {
+    background-size: cover;
+    height: 500px;
+  }
+   #daycoffee{
+    width: 55%;
+    font-size: 54px;
+  }
+  #menucofe{
+    display: flex;
+    justify-content: center;
+  }
+  .reviewbg{
+    margin-top: 40%;
+  }
+} 
+
+@media (max-width: 992px) {
+  #navbg {
+    background-size: cover;
+    height: 450px;
+  }
+   #offcanvasScrolling{
+    width: 50%;
+  }
+    #daycoffee{
+    width: 65%;
+    font-size: 54px;
+  }
+   #cont{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+ .video-bg{
+      display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 200%;
+  }
+  .livecoffe{
+      display: flex;
+    flex-direction: column;
+    width: 170%;
+  }
+.reviewbg{
+    margin-top: 220%;
+    height: 700px;
+  }
+      #footbg{
+    height: 500px;
+  }
+}
+
+@media (max-width: 768px) {
+  #navbg {
+    background-size: cover;
+    height: 400px;
+  }
+   #offcanvasScrolling{
+    width: 60%;
+  }
+  #energy{
+    width: 60%;
+    font-size:20px ;
+  }
+    #daycoffee{
+    width: 60%;
+    font-size: 35px;
+  }
+  #cont{
+    display: flex;
+    flex-direction: column;
+  }
+   .video-bg{
+      display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 200%;
+  }
+  .livecoffe{
+      display: flex;
+    flex-direction: column;
+    width: 170%;
+  }
+  .reviewbg{
+    margin-top: 300%;
+    text-align: center;
+    height: 800px;
+  }
+    #footbg{
+    height: 700px;
+  }
+}
+
+@media (max-width: 576px) {
+  #navbg {
+    background-size: cover;
+    height: 350px;
+  }
+   #offcanvasScrolling{
+    width: 70%;
+  }
+   #energy{
+    width: 60%;
+    font-size:15px ;
+  }
+  #daycoffee{
+    width: 65%;
+    font-size: 25px;
+  }
+   .video-bg{
+      display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 200%;
+  }
+  .livecoffe{
+      display: flex;
+    flex-direction: column;
+    width: 170%;
+  }
+
+   .reviewbg{
+    margin-top: 420%;
+    height: 870px;
+    text-align: center;
+  }
+  @media (max-width: 414px){
+     #navbg {
+    background-size: cover;
+    height: 300px;
+  }
+   #offcanvasScrolling{
+    width: 70%;
+  }
+   #energy{
+    width: 60%;
+    font-size:10px ;
+  }
+    #daycoffee{
+    width: 65%;
+    font-size: 20px;
+  }
+  }
+  .video-bg{
+      display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 200%;
+  }
+  .livecoffe{
+      display: flex;
+    flex-direction: column;
+    width: 170%;
+  }
+    .reviewbg{
+    margin-top: 510%;
+    height: 900px;
+    text-align: center;
+  }
+  #footbg{
+    height: 700px;
+  }
+  #footermatter{
+   position: relative;
+   left: -5%;
+  }
+}
+  </style>
+</head>
+<body>
+
+<section id="home">
+  <div id="navbg">
+  <nav class="navbar navbar-expand-lg">
+  <div class="container-fluid mt-1">
+    <img src="images/WhatsApp_Image_2025-08-13_at_7.07.00_PM-removebg-preview.png" height="37px"  width="123px"alt="">
+    <div id="navside">
+      <button  type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling" class="navbar-toggler">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li>
+          <h2  id="welcomeMessage">Welcome, User!</h2>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#home">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#about">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#coffee">coffee</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#review">Review</a>
+        </li>
+        <button id="logout" onclick="logout()">Logout</button>
+      </ul>
+    </div>
+    
+    </div>
+  </div>
+  
+</nav>
+<p id="energy">Now you can feel the Energy</p>
+<h1 id="daycoffee">Start your day with
+a black Coffee</h1>
+<button id="buy">BUY NOW</button>
+  </div>
+    
+    </section>
+  <!--offcanva-->
+
+<div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="offcanvasScrollingLabel"><div id="ooo">welcome</div></h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+    <ul class="navbar-nav">
+      
+        <li class="nav-item">
+          <a class="nav-link" href="#home">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#about">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#coffee">coffee</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#review">Review</a>
+        </li>
+        <button id="logout" onclick="logout()">Logout</button>
+      </ul>
+
+  </div>
+</div>
+
+<section id="about">
+<div class="container" id="cont">
+<div class="vid">
+  
+    <a href="https://youtu.be/rpyBYuu-wJI?si=dn9JOk6zSXgDWDDf"><img class="video-bg" src="images/video-bg.jpg.webp" alt="bg"></a>
+  </div>
+  <div class="makingcoffee">
+    <p class="livecoffe">Live Coffee making process.</p>
+    <h2 style="color: black;" class="livecoffe">We Telecast our
+Coffee Making Live</h2>
+<p class="livecoffe" style="color: black;">We are here to listen from you deliver exellence</p>
+<p class="livecoffe" style="color: black;font-weight: 200;">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod temp or incididunt ut labore et dolore magna aliqua. Ut enim ad minim.</p>
+<img  class="livecoffe" src="images/signature.png.webp" alt="">
+  </div>
+</div>
+</section>
+
+
+<section id="coffee">
+<div class="menu">
+  <div class="container">
+     <div id="whatcoffee">
+  <h1>What kind of Coffee we serve for you</h1>
+  <p>Who are in extremely love with eco friendly system.</p>
+    </div>
+
+    <div class="row d-flex" id="menucofe" style="gap:40px;">
+        <div class="single-menu col-lg-4">
+          <img class="menucoffee" src="images/cappuccion.jpg" height="300px" width="107%" alt="">
+          <div class="title-div justify-content-between d-flex">
+									<h4 class="menunames">Cappuccino</h4>
+									<p class="price float-right">$49</p>
+								</div>
+                <p class="menufell" >Usage of the Internet is becoming more common due to rapid advance.</p>	
+        </div>
+        <div class="single-menu col-lg-4">
+          <img class="menucoffee" src="images/american.jpg" height="300px" width="107%" alt="">
+          <div class="title-div justify-content-between d-flex">
+									<h4 class="menunames">Americano</h4>
+									<p class="price float-right">$49</p>
+								</div>
+                <p class="menufell">Usage of the Internet is becoming more common due to rapid advance.</p>	
+        </div>
+         <div class="single-menu col-lg-4">
+          <img class="menucoffee" src="images/espress.jpg" height="300px" width="107%" alt="">
+          <div class="title-div justify-content-between d-flex">
+									<h4 class="menunames">Espresso</h4>
+									<p class="price float-right">$49</p>
+								</div>
+                <p class="menufell">Usage of the Internet is becoming more common due to rapid advance.</p>	
+        </div>
+
+         <div class="single-menu col-lg-4">
+          <img class="menucoffee" src="images/Macchiato.jpg" height="300px" width="107%" alt="">
+          <div class="title-div justify-content-between d-flex">
+									<h4 class="menunames">Macchiato</h4>
+									<p class="price float-right">$49</p>
+								</div>
+                <p class="menufell">Usage of the Internet is becoming more common due to rapid advance.</p>	
+        </div>
+
+         <div class="single-menu col-lg-4">
+          <img class="menucoffee" src="images/Mocha.jpg" height="300px" width="107%" alt="">
+          <div class="title-div justify-content-between d-flex">
+									<h4 class="menunames">Mocha</h4>
+									<p class="price float-right">$49</p>
+								</div>
+                <p class="menufell">Usage of the Internet is becoming more common due to rapid advance.</p>	
+        </div>
+
+         <div class="single-menu col-lg-4">
+          <img class="menucoffee" src="images/Coffee Latte.jpg" height="300px" width="107%" alt="">
+          <div class="title-div justify-content-between d-flex">
+									<h4 class="menunames">Coffee Latte</h4>
+									<p class="price float-right">$49</p>
+								</div>
+                <p class="menufell">Usage of the Internet is becoming more common due to rapid advance.</p>	
+        </div>
+
+    </div>
+  </div>
+</div>
+</section>
+  
+<section id="review">
+  <div class="reviewbg">
+     <div id="whatcoffee">
+  <h1 style="color: white;">What kind of Coffee we serve for you</h1>
+  <p style="color: white;">Who are in extremely love with eco friendly system.</p>
+    </div>
+    <div class="container">
+      <div class="row">
+      <div class="col-lg-6 col-md-6 col-sm-12">
+    <img src="images/r1.png.webp" alt="">
+        <h4 class="reviewtext">lorem ipusm</h4>
+        <p class="reviewtext">Accessories Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker. Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker.</p>
+     </div>
+     <div class="col-lg-6 col-md-6 col-sm-12">
+        <img src="images/r2.png.webp" alt="">
+    <h4 class="reviewtext">lorem ipusm</h4>
+    <p class="reviewtext">Accessories Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker. Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker.</p>
+   </div>
+   </div>
+   <div class="container row">
+   <div class="col-lg-3 col-md-6 single-counter">
+							<h1 class="counter">2536</h1>
+							<p class="personreviw">Happy Client</p>
+						</div>
+            <div class="col-lg-3 col-md-6 single-counter">
+							<h1 class="counter">7562</h1>
+							<p class="personreviw">Total Projects</p>
+						</div>
+            <div class="col-lg-3 col-md-6 single-counter">
+							<h1 class="counter">2013</h1>
+							<p class="personreviw">Cups Coffee</p>
+						</div>
+            <div class="col-lg-3 col-md-6 single-counter">
+							<h1 class="counter">10536</h1>
+							<p class="personreviw">Total Submitted</p>
+						</div>
+            </div>
+    </div>
+    
+  </div>
+</section>
+
+<footer>
+  <section>
+    <div id="footbg">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6 col-md-6 col-sm-12">
+            <h3 class="footerheading">About Us</h3>
+            <p class="footerheading">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore dolore magna aliqua.</p>
+          <p class="footerheading">Copyright ©2025 All rights reserved | This template is made with <img src="images/heart-icon-white-27.jpg" height="20px" alt=""> by <i style="color: #daa520;">vamsi</i> </p><i class="bi bi-arrow-through-heart"></i> 
+          </div>
+          <div class="col-lg-4 col-md-6 col-sm-12" >
+            <h3 class="footerheading">Newsletter</h3>
+          <p class="footerheading">Stay update with our latest</p>
+          <form action="" class="d-flex gap-2">
+            <input type="email" name="email" class="form-control w-75 form-control-sm" placeholder="enter name" >
+            <input type="submit" name="submit" class="btn btn-warning">
+          </form>
+          </div>
+          <div class="col-lg-2 col-md-6 col-sm-12">
+            <h3 class="footerheading">Follow Us</h3>
+          <p class="footerheading">Let us be social</p>
+          </div>
+        </div>  
+      </div>
+    </didv>
+  </section>
+</footer>
+
+
+  <script>
+    // Check if user is logged in
+    const storedUser = JSON.parse(localStorage.getItem("userData"));
+    const storde = JSON.parse(sessionStorage.getItem('userData'));
+
+  
+
+    if (!storedUser || !storedUser.email) {
+      // If not logged in, redirect to login
+      alert("Please login first.");
+      window.location.href = "login.html"; // replace with your login file name
+    } else {
+      // Show user's name
+      document.getElementById("ooo").textContent = `welcome, ${storedUser.name}!`
+      document.getElementById("welcomeMessage").textContent = `Welcome, ${storedUser.name}!`;
+    }
+
+   // sessionstorage
+      if (!storde || !storde.email) {
+      // If not logged in, redirect to login
+      alert("Please login first.");
+      window.location.href = "login.html"; // replace with your login file name
+    } else {
+      // Show user's name
+      // document.getElementById("welcomeMessage").textContent = `Welcome, ${storde.name}!`;
+    }
+    
+    function logout() {
+      sessionStorage.removeItem("userData"); // clear login
+      alert("You have been logged out.");
+      window.location.href = "login.html"; // redirect to login page
+    }
+
+  </script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+</body>
+</html>
