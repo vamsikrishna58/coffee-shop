@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-image:url('images/caffeine-coffee-coffee-beans-585750.jpg');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 100%;
+      display: flex;
+      height: 100vh;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .container {
+      background:  rgba(255, 255, 255, 0.376);
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      width: 400px;
+    }
+
+    .container h2 {
+      text-align: center;
+       color: rgb(50 38 38);
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+
+    .container input {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+    }
+
+       input{
+      font-size: medium;
+      border-radius: 10px;
+      border: none;
+      background-color: rgba(240, 255, 255, 0.429);
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+    input:hover{
+      background-color: white;
+      color: black;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+    .container button {
+      width: 100%;
+      padding: 10px;
+      background: #007BFF;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    .container button:hover {
+      background: #0056b3;
+    }
+
+    .message {
+      margin-top: 10px;
+      text-align: center;
+      color: red;
+    }
+    a{
+        text-decoration: none;
+    }
+
+
+    @media (max-width: 575.98px) {
+        body{
+  
+    background-size: cover;
+  }
+  .container {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .container h2 {
+    font-size: 1.5rem;
+  }
+
+  input {
+    font-size: 0.9rem;
+    padding: 8px;
+  }
+
+  .container button {
+    font-size: 0.9rem;
+    padding: 8px;
+  }
+}
+
+/* Medium devices (tablets, 576px to 991px) */
+@media (min-width: 576px) and (max-width: 991.98px) {
+ body{
+  background-size: cover;
+ }
+  .container {
+    width: 90%;
+    height: 300px;
+    padding: 25px;
+    line-height: 45px;
+  }
+
+  .container h2 {
+    font-size: 2.5rem;
+  }
+
+  input {
+     font-size: 1rem;
+    padding: 5px;
+  }
+
+  .container button {
+    font-size: 2rem;
+    padding: 5px;
+  }
+  #haveaccount{
+  font-size: 1rem;
+}
+form{
+  line-height:30px;
+}
+
+#email{
+  padding: 5px;
+}
+#password{
+  padding: 5px;
+}
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .container {
+    width: 400px;
+  }
+
+  .container h2 {
+    font-size: 2rem;
+  }
+
+  input,
+  .container button {
+    font-size: 1rem;
+  }
+}
+
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h2>Login</h2>
+    <form action="">
+    <input type="email" id="loginEmail" placeholder="Email" required>
+    <input type="password" id="loginPassword" placeholder="Password" required>
+    <button onclick="loginUser()">Login</button>
+    <div class="message" id="loginMessage"></div>
+    </form>
+  </div>
+
+  <script>
+
+    function loginUser() {
+      const email = document.getElementById('loginEmail').value.trim();
+      const password = document.getElementById('loginPassword').value;
+
+
+       if (email === '' || password === '') {
+        alert("Please fill all fields!");
+        return;
+      }
+
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+      alert("Please enter a valid email address!");
+      return;
+    }
+
+      const user = {
+        email: email,
+        password: password
+      };
+
+      // Store in localStorage
+
+      sessionStorage.setItem("userData", JSON.stringify(user));
+      // Get user data from localStorage
+      const storedUser = JSON.parse(localStorage.getItem("userData"));
+      
+      
+
+      if (!storedUser) {
+        document.getElementById("loginMessage").textContent = "No user found. Please register first.";
+        return;
+      }
+
+
+  if (email === storedUser.email && password === storedUser.password) {
+      document.getElementById("loginMessage").style.color = "green";
+      document.getElementById("loginMessage").textContent = "Login Successful!";
+      
+      // Optional: Redirect to home page after 1 second
+      setTimeout(() => {
+        window.location.href = 'home.html';
+      }, 1000);
+    } else {
+      document.getElementById("loginMessage").style.color = "red";
+      document.getElementById("loginMessage").textContent = "Invalid email or password.";
+    }
+
+
+  
+    
+
+      // Clear fields
+      document.getElementById('loginEmail').value = "";
+      document.getElementById('loginPassword').value = "";
+      
+      
+    }
+  </script>
+
+</body>
+</html>
