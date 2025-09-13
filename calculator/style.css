@@ -1,56 +1,351 @@
 *{
- margin: 0;
- padding: 0;
- font-family: "Poppins", sans-serif;
- box-sizing: border-box;
-}
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+ 
+    #navbg{
+      background-image: url('images/banner01.jpg');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size:cover;
+      height: 600px;
+    }
 
-.container{
-    width: 100%;
-    height: 100vh;
-    background: rgb(150, 213, 235);
-    display: flex;   
-    align-items: center;
-    justify-content: center;
-}
+    #welcomeMessage{
+      color: white;
+      font-size: 15px;
+      margin-top: 9px;
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      margin-right: 40px;
+    }
+   .nav-link{
+      color: white;
+      text-transform: uppercase;
+      font-size: 12px;
+    }
+    .nav-link:hover{
+      color: rgb(230, 227, 227);
+    }
 
-.calculater{
-    background: #445061;
-    padding: 20px;
-    border-radius: 10px;
-}
+    #navside{
+      justify-content: end;
+    }
+    #logout {
+      padding: 0px 10px;
+      margin-left: 15px;
+      font-size: 13px;
+      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      background: #dc3545;
+      color: white;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+    }
 
-.calculater form input{
-    border: 0;
-    outline: 0;
-    width: 60px;
-    height: 60px;
-    border-radius: 10px;
-    box-shadow: -8px -8px 15px rgba(34, 32, 32, 0.1),5px 5px 15px rgba(16, 11, 11, 0.2);
-    background: transparent;
-    font-size: 20px;
-    cursor: pointer;
-    margin: 10px;
-}
+    #logout:hover {
+      background: #c82333;
+    }
+ 
+ .nav-link{
+      color: white;
+      text-transform: uppercase;
+      font-size: 12px;
+    }
+ 
+    #offcanvasScrolling{
+      background-color: rgba(184, 183, 183, 0.864);
+    }
+ 
+ #energy{
+  font-size: 28px;
+  font-weight: 400;
+  color: #fff;
+  margin-top: 10%;
+  margin-left: 5%;
+ }
 
-form .display{
+ 
+    #daycoffee{
+      font-size: 60px;
+    color: #fff;
+    width: 52%;
+    margin-left: 5%;
+    }
+
+    #buy{
+      margin-left: 5%;
+    border-radius: 25px;
+    border: none;
+    font-size: 16px;
+    padding: 5px 30px;
+    font-weight: 400;
+    }
+    #buy:hover{
+      background-color: #ffffff00;
+      color: white;
+      border: 1px solid white;
+    }
+
+    #cont{
+      margin-top: 5%;
+      width: 100%;
+      display: flex;
+    }
+    .vid{
+      width: 50%;
+    }
+    .makingcoffee{
+      width: 50%;
+    }
+    .video-bg{
+      opacity:0.7;
+    }
+    .livecoffe{
+      color: goldenrod;
+      margin-top: 2%;
+      margin-left: 20%;
+    }
+    .menu{
+      background-image: url('images/menu-bg.jpg.webp');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      height: 1050px;
+    }
+    #whatcoffee{
+      margin-top:5%;
+      padding-top: 4%;
+      text-align: center;
+      margin-bottom: 7%;
+    }
+    .single-menu{
+     /* background-color:rgb(255, 254, 254);
+      box-shadow: rgba(0, 0, 0, 0.061) 4px 4px; */
+      background-color: #fff;
+    box-shadow: 0px 10px 30px 0px rgba(182, 136, 52, 0.2);
+      width:350px;
+      height: 430px;
+      border-radius: 10px;
+    }
+    .menucoffee{
+      position: relative;
+      right: 11px;
+      border-top-right-radius: 10px;
+       border-top-left-radius: 10px;
+    }
+    .menunames{
+margin-top: 15px;
+    }
+    .price{
+margin-top: 15px;
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+    .menufell{
+font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+    .reviewbg{
+      background-color: rgb(158, 123, 35);
+      height: 500px;
+      margin-top: 10%;
+    }
+    .reviewtext{
+      color: white;
+    }
+    .counter{
+      color: white;
+    }
+    .personreviw{
+      color: white;
+    }
+    #footbg{
+      background-image: url('images/footer-bg.jpg.webp');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      height: 400px;
+      margin-top: 5%;
+      padding-top: 12%;
+    }
+    #footermatter{
+      position: relative;
+      top: 155px;
+      margin-left:90px ;
+      margin-right: 45px;
+    left: 55px;
+     /* border: 2px solid red; */
+    }
+    .footerheading{
+      color: white;
+    }
+
+ @media (max-width: 1200px) {
+  #navbg {
+    background-size: cover;
+    height: 500px;
+  }
+   #daycoffee{
+    width: 55%;
+    font-size: 54px;
+  }
+  #menucofe{
     display: flex;
-    justify-content: flex-end ;
-    margin: 10px 0;
+    justify-content: center;
+  }
+  .reviewbg{
+    margin-top: 40%;
+  }
+} 
 
+@media (max-width: 992px) {
+  #navbg {
+    background-size: cover;
+    height: 450px;
+  }
+   #offcanvasScrolling{
+    width: 50%;
+  }
+    #daycoffee{
+    width: 65%;
+    font-size: 54px;
+  }
+   #cont{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+ .video-bg{
+      display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 200%;
+  }
+  .livecoffe{
+      display: flex;
+    flex-direction: column;
+    width: 170%;
+  }
+.reviewbg{
+    margin-top: 220%;
+    height: 700px;
+  }
+      #footbg{
+    height: 500px;
+  }
 }
 
-form .display input{
-    text-align: right;
-    flex: 1;
-    font-size: 45px;
-    box-shadow: none;
+@media (max-width: 768px) {
+  #navbg {
+    background-size: cover;
+    height: 400px;
+  }
+   #offcanvasScrolling{
+    width: 60%;
+  }
+  #energy{
+    width: 60%;
+    font-size:20px ;
+  }
+    #daycoffee{
+    width: 60%;
+    font-size: 35px;
+  }
+  #cont{
+    display: flex;
+    flex-direction: column;
+  }
+   .video-bg{
+      display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 200%;
+  }
+  .livecoffe{
+      display: flex;
+    flex-direction: column;
+    width: 170%;
+  }
+  .reviewbg{
+    margin-top: 300%;
+    text-align: center;
+    height: 800px;
+  }
+    #footbg{
+    height: 700px;
+  }
 }
 
-form input.equal{
-    width: 145px;
-}
+@media (max-width: 576px) {
+  #navbg {
+    background-size: cover;
+    height: 350px;
+  }
+   #offcanvasScrolling{
+    width: 70%;
+  }
+   #energy{
+    width: 60%;
+    font-size:15px ;
+  }
+  #daycoffee{
+    width: 65%;
+    font-size: 25px;
+  }
+   .video-bg{
+      display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 200%;
+  }
+  .livecoffe{
+      display: flex;
+    flex-direction: column;
+    width: 170%;
+  }
 
-form input.operator{
-    color: rgb(228, 237, 220);
+   .reviewbg{
+    margin-top: 420%;
+    height: 870px;
+    text-align: center;
+  }
+  @media (max-width: 414px){
+     #navbg {
+    background-size: cover;
+    height: 300px;
+  }
+   #offcanvasScrolling{
+    width: 70%;
+  }
+   #energy{
+    width: 60%;
+    font-size:10px ;
+  }
+    #daycoffee{
+    width: 65%;
+    font-size: 20px;
+  }
+  }
+  .video-bg{
+      display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 200%;
+  }
+  .livecoffe{
+      display: flex;
+    flex-direction: column;
+    width: 170%;
+  }
+    .reviewbg{
+    margin-top: 510%;
+    height: 900px;
+    text-align: center;
+  }
+  #footbg{
+    height: 700px;
+  }
+  #footermatter{
+   position: relative;
+   left: -5%;
+  }
 }
